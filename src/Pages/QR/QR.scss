@@ -1,0 +1,54 @@
+.qrContainer {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: space-between;
+
+  .qrHeader {
+    padding: 3rem;
+    font-size: 3rem;
+  }
+
+  .qrContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+
+    .qrScanner {
+      & video {
+        background-color: #000;
+        height: 50vh;
+        max-width: 80vw;
+      }
+    }
+  }
+
+  .qrFooter {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+
+    justify-content: space-between;
+
+    font-size: 2rem;
+
+    .qrFooterLeft {
+      display: flex;
+      align-items: center;
+      padding: 3rem;
+    }
+
+    .qrFooterRight {
+      display: flex;
+      align-items: center;
+      padding: 3rem;
+    }
+  }
+}

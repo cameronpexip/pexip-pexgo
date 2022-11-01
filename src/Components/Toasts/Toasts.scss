@@ -1,0 +1,41 @@
+.toastsContainer {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+
+  .toast {
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 0.3rem;
+    border-radius: 5px;
+    background-color: rgba(219, 34, 10, 0.8);
+    color: #fff;
+
+    .toastHeader {
+      font-size: 1.8rem;
+    }
+
+    .toastContent {
+      font-size: 1.2rem;
+    }
+  }
+
+  .toastsTop {
+    position: absolute;
+
+    top: 2rem;
+    left: 50%;
+
+    transform: translate(-50%, 0%);
+  }
+
+  .toastsBottom {
+    position: absolute;
+
+    bottom: 2rem;
+    left: 50%;
+
+    transform: translate(-50%, 0%);
+  }
+}

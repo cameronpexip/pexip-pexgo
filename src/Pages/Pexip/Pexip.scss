@@ -1,0 +1,122 @@
+.pageContainer {
+  color: #fff;
+
+  background-color: #222a35;
+
+  width: 100vw;
+  height: 100vh;
+
+  .optionCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .optionCard {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      padding: 2.5rem;
+      margin: 1rem;
+      border-radius: 3rem;
+      min-width: 16rem;
+
+      color: #fff;
+      font-weight: 600;
+
+      background-color: #0ebec7;
+      border: 3px solid #fff;
+
+      position: relative;
+
+      &:hover {
+        background-color: #0a99a1;
+        cursor: pointer;
+
+        & > .optionCardNumber {
+          background-color: #0ebec7;
+        }
+      }
+
+      .optionCardNumber {
+        position: absolute;
+        top: -1.5rem;
+        left: -1.5rem;
+        background-color: #0a99a1;
+        border-radius: 4rem;
+        width: 4rem;
+        height: 4rem;
+        font-size: 3rem;
+
+        text-align: center;
+        line-height: 3.8rem;
+        border: 3px solid #fff;
+      }
+
+      .optionCardHeader {
+        font-size: 2rem;
+      }
+
+      .optionCardIcon {
+        font-size: 5rem;
+        margin-bottom: 1rem;
+      }
+
+      .optionCardText {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .footerButton {
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+
+    .footerButtonButton {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      padding: 1rem;
+      margin: 1rem;
+      border-radius: 3rem;
+      min-width: 16rem;
+
+      color: #fff;
+      font-weight: 600;
+
+      background-color: #0ebec7;
+      border: 3px solid #fff;
+
+      position: relative;
+
+      &:hover {
+        background-color: #0a99a1;
+        cursor: pointer;
+
+        & > .footerButtonNumber {
+          background-color: #0ebec7;
+        }
+      }
+
+      .footerButtonNumber {
+        position: absolute;
+        top: -1.5rem;
+        left: -1.5rem;
+        background-color: #0a99a1;
+        border-radius: 4rem;
+        width: 4rem;
+        height: 4rem;
+        font-size: 3rem;
+
+        text-align: center;
+        line-height: 3.8rem;
+        border: 3px solid #fff;
+      }
+    }
+  }
+}

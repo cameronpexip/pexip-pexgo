@@ -1,0 +1,56 @@
+.landingContainer {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: space-between;
+
+  background-image: url(../../Assets/Background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .landingHeader {
+    padding: 3rem;
+    font-size: 3rem;
+  }
+
+  .landingContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+  }
+
+  .landingFooter {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+
+    justify-content: space-between;
+
+    font-size: 2rem;
+
+    .landingDeviceName {
+      display: flex;
+      align-items: center;
+      padding: 3rem;
+    }
+
+    .landingLogo {
+      display: flex;
+      align-items: center;
+      padding: 3rem;
+    }
+
+    .landingRoomName {
+      display: flex;
+      align-items: center;
+      padding: 3rem;
+    }
+  }
+}
