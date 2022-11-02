@@ -22,6 +22,7 @@ export default function InCall() {
   const navigate = useNavigate();
 
   const [showNearEnd, setShowNearEnd] = useState(false);
+  const [flashlightState, setFlashlightState] = useState(false);
 
   const farEndVideo = useRef(null);
   const nearEndVideo = useRef(null);
@@ -45,6 +46,25 @@ export default function InCall() {
     } else {
       setShowNearEnd((show) => !show);
     }
+  }
+
+  function toggleFlashlight(override) {
+    let light = override ? override : !flashlightState;
+
+    navigator.mediaDevices.getUserMedia({ video: true }).then((mediaStream) => {
+      const track = mediaStream.getVideoTracks()[0];
+      track
+        .applyConstraints({
+          advanced: [{ torch: light }],
+        })
+
+        .then(() => {
+          setFlashlightState(light);
+        })
+        .catch((e) => {
+          console.error('Could not toggle flashlight', e);
+        });
+    });
   }
 
   useEffect(() => {
@@ -89,7 +109,14 @@ export default function InCall() {
           <FontAwesomeIcon icon={faRetweet} />
         </div>
         <div className='callControl'>X5</div>
-        <div className='callControl callControlActiveYellow'>
+        <div
+          className={
+            flashlightState
+              ? 'callControl callControlActiveYellow'
+              : 'callControl'
+          }
+          onClick={() => toggleFlashlight()}
+        >
           <FontAwesomeIcon icon={faLightbulb} />
         </div>
         <div
