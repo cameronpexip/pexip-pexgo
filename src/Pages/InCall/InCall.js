@@ -13,7 +13,6 @@ import {
   faMagnifyingGlassPlus,
   faMagnifyingGlassMinus,
   faMountain,
-  faDisplay,
 } from '@fortawesome/free-solid-svg-icons';
 
 import './InCall.scss';
@@ -23,6 +22,7 @@ export default function InCall() {
 
   const [showNearEnd, setShowNearEnd] = useState(false);
   const [flashlightState, setFlashlightState] = useState(false);
+  const [zoomLevel, setZoomLevel] = useState(0);
 
   const farEndVideo = useRef(null);
   const nearEndVideo = useRef(null);
@@ -63,6 +63,34 @@ export default function InCall() {
         })
         .catch((e) => {
           console.error('Could not toggle flashlight', e);
+        });
+    });
+  }
+
+  function setZoom(zoomIn) {
+    let zoom = 0;
+
+    if (zoomIn) {
+      zoom = zoomLevel + 1;
+    } else {
+      zoom = zoomLevel - 1;
+    }
+
+    if (zoom < 0) zoom = 0;
+    if (zoom > 4) zoom = 4;
+
+    navigator.mediaDevices.getUserMedia({ video: true }).then((mediaStream) => {
+      const track = mediaStream.getVideoTracks()[0];
+      track
+        .applyConstraints({
+          advanced: [{ zoom: zoom }],
+        })
+
+        .then(() => {
+          setZoomLevel(zoom);
+        })
+        .catch((e) => {
+          console.error('Could not zoom camera', e);
         });
     });
   }
@@ -133,10 +161,10 @@ export default function InCall() {
         </div>
       </div>
       <div className='callControlRight'>
-        <div className='callControl'>
+        <div className='callControl' onClick={() => setZoom(true)}>
           <FontAwesomeIcon icon={faMagnifyingGlassPlus} />
         </div>
-        <div className='callControl'>
+        <div className='callControl' onClick={() => setZoom(false)}>
           <FontAwesomeIcon icon={faMagnifyingGlassMinus} />
         </div>
         <div className='callControl' onClick={() => switchView(true)}>
@@ -146,10 +174,16 @@ export default function InCall() {
           <FontAwesomeIcon icon={faMountain} />
         </div>
         <div className='callControl'>
-          <FontAwesomeIcon icon={faLightbulb} />
+          <FontAwesomeIcon
+            icon={faLightbulb}
+            onClick={() => toggleFlashlight(true)}
+          />
         </div>
         <div className='callControl'>
-          <FontAwesomeIcon icon={faLightbulb} />
+          <FontAwesomeIcon
+            icon={faLightbulb}
+            onClick={() => toggleFlashlight(false)}
+          />
         </div>
       </div>
       <div className='callVideo'>
