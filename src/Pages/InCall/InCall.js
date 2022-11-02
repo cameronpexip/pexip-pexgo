@@ -48,8 +48,8 @@ export default function InCall() {
     }
   }
 
-  function toggleFlashlight(override) {
-    let light = override ? override : !flashlightState;
+  function toggleFlashlight(override = undefined) {
+    let light = override != undefined ? override : !flashlightState;
 
     navigator.mediaDevices.getUserMedia({ video: true }).then((mediaStream) => {
       const track = mediaStream.getVideoTracks()[0];
@@ -68,12 +68,12 @@ export default function InCall() {
   }
 
   function setZoom(zoomIn) {
-    let zoom = 0;
+    let zoom = zoomLevel;
 
     if (zoomIn) {
-      zoom = zoomLevel + 1;
+      zoom = zoom + 1;
     } else {
-      zoom = zoomLevel - 1;
+      zoom = zoom - 1;
     }
 
     if (zoom < 0) zoom = 0;
@@ -90,6 +90,7 @@ export default function InCall() {
           setZoomLevel(zoom);
         })
         .catch((e) => {
+          alert('Could not zoom camera', e);
           console.error('Could not zoom camera', e);
         });
     });
