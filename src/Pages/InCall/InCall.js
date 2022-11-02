@@ -40,8 +40,8 @@ export default function InCall() {
     disconnectCall();
   }
 
-  function switchView(override) {
-    if (override) {
+  function switchView(override = undefined) {
+    if (override !== undefined) {
       setShowNearEnd(override);
     } else {
       setShowNearEnd((show) => !show);
