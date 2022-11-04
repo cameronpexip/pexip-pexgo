@@ -18,7 +18,11 @@ export default function Landing() {
       <div className='landingHeader'>Department of Health</div>
       <div className='landingContent'>
         <div className='optionCards'>
-          <div className='optionCard' onClick={() => navigate('/favourites')}>
+          <div
+            className='optionCard'
+            onClick={() => navigate('/favourites')}
+            title={`hf_make_clickable|hf_show_text|hf_use_description|Select Favourites`}
+          >
             <div className='optionCardNumber'>1</div>
             <div className='optionCardIcon'>
               <FontAwesomeIcon icon={faStar} />
@@ -26,7 +30,11 @@ export default function Landing() {
             <div className='optionCardHeader'>Favourites</div>
           </div>
 
-          <div className='optionCard' onClick={() => navigate('/qr')}>
+          <div
+            className='optionCard'
+            onClick={() => navigate('/qr')}
+            title={`hf_make_clickable|hf_show_text|hf_use_description|Select QR`}
+          >
             <div className='optionCardNumber'>2</div>
             <div className='optionCardIcon'>
               <FontAwesomeIcon icon={faQrcode} />

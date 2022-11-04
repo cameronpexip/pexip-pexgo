@@ -57,7 +57,11 @@ export default function Favourites() {
       </div>
       <div className='favouriteFooter'>
         <div className='favouriteFooterLeft'></div>
-        <div className='footerButton' onClick={() => navigate('/')}>
+        <div
+          className='footerButton'
+          onClick={() => navigate('/')}
+          title={`hf_make_clickable|hf_show_text|hf_use_description|Go Back`}
+        >
           <div className='footerButtonButton'>
             <div className='footerButtonNumber'>{favourites.length + 1}</div>
             OK

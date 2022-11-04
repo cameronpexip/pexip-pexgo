@@ -44,7 +44,11 @@ export default function QR() {
       </div>
       <div className='qrFooter'>
         <div className='qrFooterLeft'></div>
-        <div className='footerButton' onClick={() => navigate('/')}>
+        <div
+          className='footerButton'
+          onClick={() => navigate('/')}
+          title={`hf_make_clickable|hf_show_text|hf_use_description|Go Back`}
+        >
           <div className='footerButtonButton'>
             <div className='footerButtonNumber'>1</div>OK
           </div>

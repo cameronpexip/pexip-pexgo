@@ -134,7 +134,7 @@ export default function InCall() {
         <div className='callControl'>
           <FontAwesomeIcon icon={faSignal} />
         </div>
-        <div className='callControl' onClick={() => switchView()}>
+        <div className='callControl'>
           <FontAwesomeIcon icon={faRetweet} />
         </div>
         <div className='callControl'>X5</div>
@@ -144,7 +144,6 @@ export default function InCall() {
               ? 'callControl callControlActiveYellow'
               : 'callControl'
           }
-          onClick={() => toggleFlashlight()}
         >
           <FontAwesomeIcon icon={faLightbulb} />
         </div>
@@ -152,7 +151,6 @@ export default function InCall() {
           className={
             muteMic ? 'callControl callControlActiveRed' : 'callControl'
           }
-          onClick={() => toggleMicMute()}
         >
           {muteMic ? (
             <FontAwesomeIcon icon={faMicrophoneSlash} />
@@ -162,28 +160,46 @@ export default function InCall() {
         </div>
       </div>
       <div className='callControlRight'>
-        <div className='callControl' onClick={() => setZoom(true)}>
+        <div
+          className='callControl'
+          onClick={() => setZoom(true)}
+          title={`hf_make_clickable|hf_show_text|hf_use_description|Zoom In`}
+        >
           <FontAwesomeIcon icon={faMagnifyingGlassPlus} />
         </div>
-        <div className='callControl' onClick={() => setZoom(false)}>
+        <div
+          className='callControl'
+          onClick={() => setZoom(false)}
+          title={`hf_make_clickable|hf_show_text|hf_use_description|Zoom Out`}
+        >
           <FontAwesomeIcon icon={faMagnifyingGlassMinus} />
         </div>
-        <div className='callControl' onClick={() => switchView(true)}>
+        <div
+          className='callControl'
+          onClick={() => switchView(true)}
+          title={`hf_make_clickable|hf_show_text|hf_use_description|Switch Near`}
+        >
           <FontAwesomeIcon icon={faUser} />
         </div>
-        <div className='callControl' onClick={() => switchView(false)}>
+        <div
+          className='callControl'
+          onClick={() => switchView(false)}
+          title={`hf_make_clickable|hf_show_text|hf_use_description|Switch Far`}
+        >
           <FontAwesomeIcon icon={faMountain} />
         </div>
         <div className='callControl'>
           <FontAwesomeIcon
             icon={faLightbulb}
             onClick={() => toggleFlashlight(true)}
+            title={`hf_make_clickable|hf_show_text|hf_use_description|Flashlight On`}
           />
         </div>
         <div className='callControl'>
           <FontAwesomeIcon
             icon={faLightbulb}
             onClick={() => toggleFlashlight(false)}
+            title={`hf_make_clickable|hf_show_text|hf_use_description|Flashlight Off`}
           />
         </div>
       </div>
@@ -201,11 +217,19 @@ export default function InCall() {
         ></video>
       </div>
       <div className='callFooter'>
-        <div className='footerButton' onClick={() => toggleMicMute()}>
+        <div
+          className='footerButton'
+          onClick={() => toggleMicMute()}
+          title={`hf_make_clickable|hf_show_text|hf_use_description|Toggle Mute`}
+        >
           <div className='footerButtonButton'>Mic Mute</div>
         </div>
 
-        <div className='footerButton' onClick={() => disconnect()}>
+        <div
+          className='footerButton'
+          onClick={() => disconnect()}
+          title={`hf_make_clickable|hf_show_text|hf_use_description|Disconnect Call`}
+        >
           <div className='footerButtonButton'>Disconnect Call</div>
         </div>
       </div>
