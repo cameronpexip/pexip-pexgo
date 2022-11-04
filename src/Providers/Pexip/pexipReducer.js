@@ -11,6 +11,7 @@ export const initialState = {
   callState: false,
   selectedAudioDevice: storedState.selectedAudioDevice || '',
   selectedVideoDevice: storedState.selectedVideoDevice || '',
+  participantCount: 0,
 };
 
 export default function pexipReducer(state, action) {
@@ -53,6 +54,9 @@ export default function pexipReducer(state, action) {
       break;
     case 'UPDATE_PRESENTING_LOCALLY':
       newState.inLocalPresentation = payload.inLocalPresentation;
+      break;
+    case 'UPDATE_PARTICIPANT_COUNT':
+      newState.participantCount = payload.participantCount;
       break;
     default:
       throw new Error(`No case for type ${type} found in pexipReducer.`);

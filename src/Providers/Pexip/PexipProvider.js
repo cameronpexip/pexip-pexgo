@@ -121,6 +121,15 @@ export default function PexipProvider({ children }) {
     });
   }
 
+  function rosterListUpdate(roster) {
+    dispatch({
+      type: 'UPDATE_PARTICIPANT_COUNT',
+      payload: {
+        participantCount: roster.length,
+      },
+    });
+  }
+
   function makeCall(meeting, participantName) {
     pexRTC.vp8_enabled = false;
     pexRTC.vp9_enabled = false;
@@ -171,6 +180,8 @@ export default function PexipProvider({ children }) {
     nearEndStream: state.nearEndStream,
     selectedAudioDevice: state.selectedAudioDevice,
     selectedVideoDevice: state.selectedVideoDevice,
+
+    participantCount: state.participantCount,
 
     toggleMicMute,
     toggleVidMute,
@@ -263,6 +274,8 @@ export default function PexipProvider({ children }) {
 
     pexRTC.onScreenshareConnected = screenshareConnected;
     pexRTC.onScreenshareStopped = screenshareStopped;
+
+    pexRTC.onRosterList = rosterListUpdate;
   }, []);
 
   return (

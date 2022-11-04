@@ -33,6 +33,7 @@ export default function InCall() {
     disconnectCall,
     toggleMicMute,
     muteMic,
+    participantCount,
   } = usePexip();
 
   function disconnect() {
@@ -129,7 +130,7 @@ export default function InCall() {
       <div className='callControlLeft'>
         <div className='callControl'>
           <FontAwesomeIcon icon={faUser} />
-          <div className='participantCount'>10</div>
+          <div className='participantCount'>{participantCount}</div>
         </div>
         <div className='callControl'>
           <FontAwesomeIcon icon={faSignal} />
