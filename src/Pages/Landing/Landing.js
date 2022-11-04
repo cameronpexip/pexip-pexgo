@@ -21,7 +21,8 @@ export default function Landing() {
           <div
             className='optionCard'
             onClick={() => navigate('/favourites')}
-            title={`hf_show_text|Select Favourites`}
+            aria-label='hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|My Favourite'
+            title='hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|My Favourite'
           >
             <div className='optionCardNumber'>1</div>
             <div className='optionCardIcon'>
