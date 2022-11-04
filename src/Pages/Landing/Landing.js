@@ -21,7 +21,7 @@ export default function Landing() {
           <div
             className='optionCard'
             onClick={() => navigate('/favourites')}
-            title={`hf_show_text|hf_use_description|Select Favourites`}
+            title={`hf_show_text|Select Favourites`}
           >
             <div className='optionCardNumber'>1</div>
             <div className='optionCardIcon'>
