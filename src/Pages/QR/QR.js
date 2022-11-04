@@ -1,17 +1,42 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useZxing } from 'react-zxing';
 import { useNavigate } from 'react-router-dom';
+import { useToasts } from '../../Providers/Toasts/ToastsProvider';
+import { usePexip } from '../../Providers/Pexip/PexipProvider';
 
 import './QR.scss';
 
 export default function QR() {
+  const [qrWait, setQRWait] = useState(false);
+  const { topToasts, addTopToast } = useToasts();
   const navigate = useNavigate();
+
+  const { makeCall } = usePexip();
 
   const { ref } = useZxing({
     onResult(result) {
-      alert(result.getText());
+      if (!qrWait) {
+        addTopToast(`QR Code Read`, null, 1000);
+        callAddress(result.getText());
+
+        setQRWait(true);
+        setTimeout(setQRWait(false), 1000);
+      }
     },
   });
+
+  function callAddress(json) {
+    json = JSON.parse(json);
+
+    if (!json || !json.pexCall) {
+      addTopToast(`Please check your QR code and try again`, null, 3000);
+      return;
+    }
+
+    addTopToast(`Calling ${json.pexCall}`, null, 3000);
+    navigate('/call');
+    makeCall(json.pexCall, 'RealWare Navigator');
+  }
 
   useEffect(() => {
     // https://reactjs.org/blog/2020/08/10/react-v17-rc.html#effect-cleanup-timing

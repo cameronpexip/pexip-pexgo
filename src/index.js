@@ -4,6 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.scss';
 import Pexip from './Pages/Pexip/Pexip';
 
+import '@fontsource/inter';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
