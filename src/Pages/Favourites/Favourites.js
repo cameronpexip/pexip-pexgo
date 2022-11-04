@@ -43,11 +43,13 @@ export default function Favourites() {
                 className='optionCard'
                 key={index}
                 onClick={() => callFavourite(index)}
-                title={`hf_make_clickable|hf_show_text|hf_use_description|Select ${
+                aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Select ${
+                  index + 1
+                }`}
+                title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Select ${
                   index + 1
                 }`}
               >
-                <div className='optionCardNumber'>{index + 1}</div>
                 <div className='optionCardHeader'>{favourite.name}</div>
                 <div className='optionCardText'>{favourite.description}</div>
               </div>
@@ -60,12 +62,10 @@ export default function Favourites() {
         <div
           className='footerButton'
           onClick={() => navigate('/')}
-          title={`hf_make_clickable|hf_show_text|hf_use_description|Go Back`}
+          aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Go Back`}
+          title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Go Back`}
         >
-          <div className='footerButtonButton'>
-            <div className='footerButtonNumber'>{favourites.length + 1}</div>
-            OK
-          </div>
+          <div className='footerButtonButton'>OK</div>
         </div>
         <div className='favouriteFooterRight'></div>
       </div>

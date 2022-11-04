@@ -47,7 +47,8 @@ export default function QR() {
         <div
           className='footerButton'
           onClick={() => navigate('/')}
-          title={`hf_make_clickable|hf_show_text|hf_use_description|Go Back`}
+          aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Go Back`}
+          title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Go Back`}
         >
           <div className='footerButtonButton'>
             <div className='footerButtonNumber'>1</div>OK

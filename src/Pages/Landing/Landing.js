@@ -24,7 +24,6 @@ export default function Landing() {
             aria-label='hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Select Favourites'
             title='hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Select Favourites'
           >
-            <div className='optionCardNumber'>1</div>
             <div className='optionCardIcon'>
               <FontAwesomeIcon icon={faStar} />
             </div>
@@ -34,9 +33,9 @@ export default function Landing() {
           <div
             className='optionCard'
             onClick={() => navigate('/qr')}
-            title={`hf_make_clickable|hf_show_text|hf_use_description|Select QR`}
+            aria-label='hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Select QR'
+            title='hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Select QR'
           >
-            <div className='optionCardNumber'>2</div>
             <div className='optionCardIcon'>
               <FontAwesomeIcon icon={faQrcode} />
             </div>
@@ -44,7 +43,6 @@ export default function Landing() {
           </div>
 
           <div className='optionCard'>
-            <div className='optionCardNumber'>3</div>
             <div className='optionCardIcon'>
               <FontAwesomeIcon icon={faCalendar} />
             </div>
@@ -52,7 +50,6 @@ export default function Landing() {
           </div>
 
           <div className='optionCard'>
-            <div className='optionCardNumber'>4</div>
             <div className='optionCardIcon'>
               <FontAwesomeIcon icon={faTools} />
             </div>
