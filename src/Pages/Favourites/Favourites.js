@@ -43,7 +43,7 @@ export default function Favourites() {
                 className='optionCard'
                 key={index}
                 onClick={() => callFavourite(index)}
-                title={`hf_make_clickable|hf_no_number|hf_use_description|Select ${
+                title={`hf_make_clickable|hf_show_text|hf_use_description|Select ${
                   index + 1
                 }`}
               >
