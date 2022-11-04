@@ -43,6 +43,9 @@ export default function Favourites() {
                 className='optionCard'
                 key={index}
                 onClick={() => callFavourite(index)}
+                title={`hf_make_clickable|hf_no_number|hf_use_description|Select ${
+                  index + 1
+                }`}
               >
                 <div className='optionCardNumber'>{index + 1}</div>
                 <div className='optionCardHeader'>{favourite.name}</div>
