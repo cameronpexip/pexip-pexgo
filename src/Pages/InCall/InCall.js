@@ -164,32 +164,32 @@ export default function InCall() {
         <div
           className='callControl'
           onClick={() => setZoom(true)}
-          aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Zoom In`}
-          title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Zoom In`}
+          aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Zoom In`}
+          title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Zoom In`}
         >
           <FontAwesomeIcon icon={faMagnifyingGlassPlus} />
         </div>
         <div
           className='callControl'
           onClick={() => setZoom(false)}
-          aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Zoom Out`}
-          title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Zoom Out`}
+          aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Zoom Out`}
+          title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Zoom Out`}
         >
           <FontAwesomeIcon icon={faMagnifyingGlassMinus} />
         </div>
         <div
           className='callControl'
           onClick={() => switchView(true)}
-          aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Switch Near`}
-          title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Switch Near`}
+          aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Switch Near`}
+          title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Switch Near`}
         >
           <FontAwesomeIcon icon={faUser} />
         </div>
         <div
           className='callControl'
           onClick={() => switchView(false)}
-          aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Switch Far`}
-          title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Switch Far`}
+          aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Switch Far`}
+          title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Switch Far`}
         >
           <FontAwesomeIcon icon={faMountain} />
         </div>
@@ -197,16 +197,16 @@ export default function InCall() {
           <FontAwesomeIcon
             icon={faLightbulb}
             onClick={() => toggleFlashlight(true)}
-            aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Flashlight On`}
-            title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Flashlight On`}
+            aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Flashlight On`}
+            title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Flashlight On`}
           />
         </div>
         <div className='callControl'>
           <FontAwesomeIcon
             icon={faLightbulb}
             onClick={() => toggleFlashlight(false)}
-            aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Flashlight Off`}
-            title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Flashlight Off`}
+            aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Flashlight Off`}
+            title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Flashlight Off`}
           />
         </div>
       </div>
