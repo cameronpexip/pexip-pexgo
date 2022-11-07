@@ -80,21 +80,32 @@ export default function InCall() {
     if (zoom < 0) zoom = 0;
     if (zoom > 4) zoom = 4;
 
-    navigator.mediaDevices.getUserMedia({ video: true }).then((mediaStream) => {
-      const track = mediaStream.getVideoTracks()[0];
-      track
-        .applyConstraints({
-          advanced: [{ zoom: zoom }],
-        })
+    console.log('Zoom to', zoom);
 
-        .then(() => {
-          setZoomLevel(zoom);
-        })
-        .catch((e) => {
-          alert('Could not zoom camera', e);
-          console.error('Could not zoom camera', e);
-        });
-    });
+    navigator.mediaDevices
+      .getUserMedia({ video: { zoom: true } })
+      .then((mediaStream) => {
+        const track = mediaStream.getVideoTracks()[0];
+
+        const capabilities = track.getCapabilities();
+        const settings = track.getSettings();
+
+        alert('capabilities', capabilities);
+        alert('capabilities.zoom', capabilities.zoom);
+        alert('settings', settings);
+
+        track
+          .applyConstraints({
+            advanced: [{ zoom: zoom }],
+          })
+
+          .then(() => {
+            setZoomLevel(zoom);
+          })
+          .catch((e) => {
+            console.error('Could not zoom camera', e);
+          });
+      });
   }
 
   useEffect(() => {
@@ -124,7 +135,6 @@ export default function InCall() {
       }
     }
   }, [nearEndStream]);
-
   return (
     <div className='inCallContainer'>
       <div className='callControlLeft'>
