@@ -162,52 +162,52 @@ export default function InCall() {
       </div>
       <div className='callControlRight'>
         <div
-          className='callControl'
+          className='callControlRightButton'
           onClick={() => setZoom(true)}
-          aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Zoom In`}
-          title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Zoom In`}
+          aria-label={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:left|Zoom In`}
+          title={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:left|Zoom In`}
         >
-          <FontAwesomeIcon icon={faMagnifyingGlassPlus} />
+          Zoom In
         </div>
         <div
-          className='callControl'
+          className='callControlRightButton'
           onClick={() => setZoom(false)}
-          aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Zoom Out`}
-          title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Zoom Out`}
+          aria-label={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:left|Zoom Out`}
+          title={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:left|Zoom Out`}
         >
-          <FontAwesomeIcon icon={faMagnifyingGlassMinus} />
+          Zoom Out
         </div>
         <div
-          className='callControl'
+          className='callControlRightButton'
           onClick={() => switchView(true)}
-          aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Switch Near`}
-          title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Switch Near`}
+          aria-label={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:left|Switch Near`}
+          title={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:left|Switch Near`}
         >
-          <FontAwesomeIcon icon={faUser} />
+          Switch Near
         </div>
         <div
-          className='callControl'
+          className='callControlRightButton'
           onClick={() => switchView(false)}
-          aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Switch Far`}
-          title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Switch Far`}
+          aria-label={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:left|Switch Far`}
+          title={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:left|Switch Far`}
         >
-          <FontAwesomeIcon icon={faMountain} />
+          Switch Far
         </div>
-        <div className='callControl'>
-          <FontAwesomeIcon
-            icon={faLightbulb}
-            onClick={() => toggleFlashlight(true)}
-            aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Flashlight On`}
-            title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Flashlight On`}
-          />
+        <div
+          className='callControlRightButton'
+          onClick={() => toggleFlashlight(true)}
+          aria-label={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:left|Flashlight On`}
+          title={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:left|Flashlight On`}
+        >
+          Flashlight On
         </div>
-        <div className='callControl'>
-          <FontAwesomeIcon
-            icon={faLightbulb}
-            onClick={() => toggleFlashlight(false)}
-            aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Flashlight Off`}
-            title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:left|Flashlight Off`}
-          />
+        <div
+          className='callControlRightButton'
+          onClick={() => toggleFlashlight(false)}
+          aria-label={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:left|Flashlight Off`}
+          title={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:left|Flashlight Off`}
+        >
+          Flashlight Off
         </div>
       </div>
       <div className='callVideo'>
@@ -224,20 +224,22 @@ export default function InCall() {
         ></video>
       </div>
       <div className='callFooter'>
-        <div
-          className='footerButton'
-          onClick={() => toggleMicMute()}
-          aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Toggle Mute`}
-          title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Toggle Mute`}
-        >
-          <div className='footerButtonButton'>Mic Mute</div>
+        <div className='footerButton'>
+          <div
+            className='footerButtonButton'
+            onClick={() => toggleMicMute()}
+            aria-label={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:right|Mic Mute`}
+            title={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:right|Mic Mute`}
+          >
+            Mic Mute
+          </div>
         </div>
 
         <div
           className='footerButton'
           onClick={() => disconnect()}
-          aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Disconnect Call`}
-          title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Disconnect Call`}
+          aria-label={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:right|Disconnect Call`}
+          title={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:right|Disconnect Call`}
         >
           <div className='footerButtonButton'>Disconnect Call</div>
         </div>

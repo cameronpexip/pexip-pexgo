@@ -19,6 +19,7 @@ export default function PexipProvider({ children }) {
   const [state, dispatch] = useReducer(pexipReducer, initialState);
 
   function toggleMicMute() {
+    console.log('Mute Mic', state.muteMic);
     pexRTC.muteAudio(!state.muteMic);
 
     dispatch({

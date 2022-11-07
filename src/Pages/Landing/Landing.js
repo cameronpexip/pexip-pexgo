@@ -21,8 +21,8 @@ export default function Landing() {
           <div
             className='optionCard'
             onClick={() => navigate('/favourites')}
-            aria-label='hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Favourites'
-            title='hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Favourites'
+            aria-label='hf_no_number|hf_hide_text|hf_use_description|hf_orientation:right|Favourites'
+            title='hf_no_number|hf_hide_text|hf_use_description|hf_orientation:right|Favourites'
           >
             <div className='optionCardIcon'>
               <FontAwesomeIcon icon={faStar} />
@@ -33,8 +33,8 @@ export default function Landing() {
           <div
             className='optionCard'
             onClick={() => navigate('/qr')}
-            aria-label='hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Scan QR'
-            title='hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Scan QR'
+            aria-label='hf_no_number|hf_hide_text|hf_use_description|hf_orientation:right|Scan QR'
+            title='hf_no_number|hf_hide_text|hf_use_description|hf_orientation:right|Scan QR'
           >
             <div className='optionCardIcon'>
               <FontAwesomeIcon icon={faQrcode} />

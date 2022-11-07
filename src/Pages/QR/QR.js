@@ -72,12 +72,10 @@ export default function QR() {
         <div
           className='footerButton'
           onClick={() => navigate('/')}
-          aria-label={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Go Back`}
-          title={`hf_no_number|hf_show_text|hf_use_description|hf_orientation:right|Go Back`}
+          aria-label={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:right|Go Back`}
+          title={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:right|Go Back`}
         >
-          <div className='footerButtonButton'>
-            <div className='footerButtonNumber'>1</div>OK
-          </div>
+          <div className='footerButtonButton'>Go Back</div>
         </div>
         <div className='qrFooterRight'></div>
       </div>
