@@ -52,7 +52,7 @@ export default function Calendar() {
 
   useEffect(() => {
     getDates();
-  });
+  }, []);
 
   return (
     <div className='calendarContainer'>
