@@ -5,6 +5,7 @@ import Landing from '../Landing/Landing';
 import Favourites from '../Favourites/Favourites';
 import QR from '../QR/QR';
 import InCall from '../InCall/InCall';
+import Calendar from '../Calendar/Calendar';
 import Settings from '../Setttings/Settings';
 
 import PexipProvider from '../../Providers/Pexip/PexipProvider';
@@ -23,6 +24,7 @@ export default function Pexip() {
             <Route path='favourites' element={<Favourites />} />
             <Route path='qr' element={<QR />} />
             <Route path='call' element={<InCall />} />
+            <Route path='calendar' element={<Calendar />} />
             <Route path='settings' element={<Settings />} />
           </Routes>
         </div>

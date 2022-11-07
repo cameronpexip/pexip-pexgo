@@ -42,7 +42,12 @@ export default function Landing() {
             <div className='optionCardHeader'>Scan QR</div>
           </div>
 
-          <div className='optionCard'>
+          <div
+            className='optionCard'
+            onClick={() => navigate('/calendar')}
+            aria-label='hf_no_number|hf_hide_text|hf_use_description|hf_orientation:right|Calendar'
+            title='hf_no_number|hf_hide_text|hf_use_description|hf_orientation:right|Calendar'
+          >
             <div className='optionCardIcon'>
               <FontAwesomeIcon icon={faCalendar} />
             </div>
