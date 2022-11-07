@@ -238,10 +238,10 @@ export default function InCall() {
           <div
             className='footerButtonButton'
             onClick={() => toggleMicMute()}
-            aria-label={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:right|Mic Mute`}
-            title={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:right|Mic Mute`}
+            aria-label={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:right|Toggle Mute`}
+            title={`hf_no_number|hf_hide_text|hf_use_description|hf_orientation:right|Toggle Mute`}
           >
-            Mic Mute
+            Toggle Mute
           </div>
         </div>
 
