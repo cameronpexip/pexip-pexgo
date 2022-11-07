@@ -13,16 +13,16 @@ export default function Favourites() {
 
   let favourites = [
     {
-      name: 'cm',
-      description: "Cameron McGuffie's VMR",
+      name: 'pexTV.health@pexipdemo.com',
+      description: 'Healthcare Demo',
     },
     {
-      name: 'healthcare.demo',
-      description: 'Healthcare Demo VMR',
+      name: 'pextv.medic@pexipdemo.com',
+      description: 'Medic Demo VMR',
     },
     {
-      name: 'teams.demo',
-      description: 'Teams Demo VMR',
+      name: 'pextv@pexipdemo.com',
+      description: 'PexTV Demo VMR',
     },
   ];
 

@@ -12,16 +12,19 @@ export default function Calendar() {
       date: '',
       subject: 'Medical Checkup',
       owner: 'Dr S. Jones',
+      uri: 'pexTV.health@pexipdemo.com',
     },
     {
       date: '',
       subject: 'Medical Checkup',
       owner: 'Dr A. Peterson',
+      uri: 'pextv.medic@pexipdemo.com',
     },
     {
       date: '',
       subject: 'Board Meeting',
       owner: 'Private',
+      uri: 'pextv@pexipdemo.com',
     },
   ]);
 
@@ -42,9 +45,9 @@ export default function Calendar() {
   }
 
   function callCalendar(index) {
-    addTopToast(`Calling ${calendars[index].description}`, null, 3000);
+    addTopToast(`Calling ${calendars[index].subject}`, null, 3000);
     navigate('/call');
-    makeCall(calendars[index].name, 'RealWare Navigator');
+    makeCall(calendars[index].uri, 'RealWare Navigator');
   }
 
   useEffect(() => {
