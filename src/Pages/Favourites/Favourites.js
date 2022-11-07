@@ -13,15 +13,15 @@ export default function Favourites() {
 
   let favourites = [
     {
-      name: 'pexTV.health@pexipdemo.com',
+      name: 'pexTV.health',
       description: 'Healthcare Demo',
     },
     {
-      name: 'pextv.medic@pexipdemo.com',
+      name: 'pextv.medic',
       description: 'Medic Demo VMR',
     },
     {
-      name: 'pextv@pexipdemo.com',
+      name: 'pextv',
       description: 'PexTV Demo VMR',
     },
   ];
