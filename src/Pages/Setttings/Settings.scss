@@ -1,0 +1,72 @@
+.settingsContainer {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: space-between;
+
+  .settingsHeader {
+    padding: 3rem;
+    font-size: 3rem;
+  }
+
+  .settingsContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+
+    .settingsButton {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      padding: 1rem;
+      margin: 1rem;
+      border-radius: 3rem;
+      min-width: 16rem;
+      font-size: 2rem;
+
+      color: #fff;
+      font-weight: 600;
+
+      background-color: #0ebec7;
+      border: 3px solid #fff;
+
+      position: relative;
+
+      &:hover {
+        background-color: #0a99a1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .settingsFooter {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+
+    justify-content: space-between;
+
+    font-size: 2rem;
+
+    .settingsFooterLeft {
+      display: flex;
+      align-items: center;
+      padding: 3rem;
+    }
+
+    .settingsFooterRight {
+      display: flex;
+      align-items: center;
+      padding: 3rem;
+    }
+  }
+}
