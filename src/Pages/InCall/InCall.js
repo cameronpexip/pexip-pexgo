@@ -16,6 +16,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import './InCall.scss';
+import VideCover from '../../Assets/VideoCover.png';
 
 export default function InCall() {
   const navigate = useNavigate();
@@ -226,11 +227,13 @@ export default function InCall() {
           autoPlay='autoPlay'
           muted
           style={{ display: showNearEnd ? 'block' : 'none' }}
+          poster={VideCover}
         ></video>
         <video
           ref={farEndVideo}
           autoPlay='autoPlay'
           style={{ display: !showNearEnd ? 'block' : 'none' }}
+          poster={VideCover}
         ></video>
       </div>
       <div className='callFooter'>

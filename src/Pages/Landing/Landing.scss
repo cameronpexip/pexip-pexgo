@@ -38,7 +38,9 @@
     .landingDeviceName {
       display: flex;
       align-items: center;
+      justify-content: flex-start;
       padding: 3rem;
+      width: 40%;
     }
 
     .landingLogo {
@@ -46,12 +48,18 @@
       align-items: center;
       justify-content: center;
       padding: 3rem;
+
+      img {
+        width: 80px;
+      }
     }
 
     .landingRoomName {
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       padding: 3rem;
+      width: 40%;
     }
   }
 }

@@ -8,7 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import './Landing.scss';
-import PexipLogo from '../../Assets/logo-white.png';
+import PexipLogo from '../../Assets/pexHealth.png';
 
 export default function Landing() {
   const navigate = useNavigate();
