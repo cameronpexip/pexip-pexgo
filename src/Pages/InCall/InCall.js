@@ -22,7 +22,7 @@ export default function InCall() {
 
   const [showNearEnd, setShowNearEnd] = useState(false);
   const [flashlightState, setFlashlightState] = useState(false);
-  const [zoomLevel, setZoomLevel] = useState(0);
+  const [zoomLevel, setZoomLevel] = useState(1);
 
   const farEndVideo = useRef(null);
   const nearEndVideo = useRef(null);
@@ -77,7 +77,7 @@ export default function InCall() {
       zoom = zoom - 1;
     }
 
-    if (zoom < 0) zoom = 0;
+    if (zoom < 1) zoom = 1;
     if (zoom > 4) zoom = 4;
 
     console.log('Zoom to', zoom);
@@ -87,12 +87,12 @@ export default function InCall() {
       .then((mediaStream) => {
         const track = mediaStream.getVideoTracks()[0];
 
-        const capabilities = track.getCapabilities();
-        const settings = track.getSettings();
+        // const capabilities = track.getCapabilities();
+        // const settings = track.getSettings();
 
-        console.log('capabilities', capabilities);
-        console.log('capabilities.zoom', capabilities.zoom);
-        console.log('settings', settings);
+        // console.log('capabilities', capabilities);
+        // console.log('capabilities.zoom', capabilities.zoom);
+        // console.log('settings', settings);
 
         track
           .applyConstraints({
@@ -148,7 +148,7 @@ export default function InCall() {
         <div className='callControl'>
           <FontAwesomeIcon icon={faRetweet} />
         </div>
-        <div className='callControl'>X5</div>
+        <div className='callControl'>X{zoomLevel}</div>
         <div
           className={
             flashlightState
