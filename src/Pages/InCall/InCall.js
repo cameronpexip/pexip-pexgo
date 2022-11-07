@@ -90,9 +90,9 @@ export default function InCall() {
         const capabilities = track.getCapabilities();
         const settings = track.getSettings();
 
-        alert('capabilities', capabilities);
-        alert('capabilities.zoom', capabilities.zoom);
-        alert('settings', settings);
+        console.log('capabilities', capabilities);
+        console.log('capabilities.zoom', capabilities.zoom);
+        console.log('settings', settings);
 
         track
           .applyConstraints({
