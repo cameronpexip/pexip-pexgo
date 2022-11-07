@@ -205,6 +205,7 @@ export default function PexipProvider({ children }) {
           break;
         default:
           updatePinState('');
+          pexRTC.setPresentationInMix(true);
           pexRTC.connect();
       }
 
