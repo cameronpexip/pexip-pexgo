@@ -10,8 +10,10 @@ export default function pexipReducer(state, action) {
       break;
     case 'REMOVE_TOP_TOAST':
       newState.topToasts = [
-        ...newState.topToasts.filter((t) => t.id != payload.id),
+        ...newState.topToasts.filter((t) => t.id !== payload.id),
       ];
+      break;
+    default:
       break;
   }
 

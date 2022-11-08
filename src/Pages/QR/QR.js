@@ -8,7 +8,7 @@ import './QR.scss';
 
 export default function QR() {
   const [qrWait, setQRWait] = useState(false);
-  const { topToasts, addTopToast } = useToasts();
+  const { addTopToast } = useToasts();
   const navigate = useNavigate();
 
   const { makeCall } = usePexip();

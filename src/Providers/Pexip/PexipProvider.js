@@ -104,24 +104,6 @@ export default function PexipProvider({ children }) {
     });
   }
 
-  function updatePresentationSource(presentationSource) {
-    dispatch({
-      type: 'UPDATE_PRESENTATION_SOURCE',
-      payload: {
-        presentationSource: presentationSource,
-      },
-    });
-  }
-
-  function updateinLocalPresentation(inLocalPresentation) {
-    dispatch({
-      type: 'UPDATE_PRESENTING_LOCALLY',
-      payload: {
-        inLocalPresentation: inLocalPresentation,
-      },
-    });
-  }
-
   function rosterListUpdate(roster) {
     dispatch({
       type: 'UPDATE_PARTICIPANT_COUNT',
@@ -234,34 +216,6 @@ export default function PexipProvider({ children }) {
       alert(error);
     }
 
-    function callPresentation(setting, presenter, uuid) {
-      updatePresentationSource('');
-      updateinRemotePresentation(setting);
-
-      // If someone starts presenting, track no loger presenting locally.
-      if (setting === true) {
-        updateinLocalPresentation(false);
-      }
-    }
-
-    function callPresentationReload(url) {
-      if (!state.inLocalPresentation) {
-        updatePresentationSource(url);
-      }
-    }
-
-    function screenshareConnected(stream) {
-      updateinRemotePresentation(true);
-      updateinLocalPresentation(true);
-      updatePresentationSource(stream);
-    }
-
-    function screenshareStopped(reason) {
-      updateinRemotePresentation(false);
-      updateinLocalPresentation(false);
-      updatePresentationSource('');
-    }
-
     // Link the callSetup method to the onSetup callback
     pexRTC.onSetup = callSetup;
     // Link the callConnected method to the onConnect callback
@@ -270,12 +224,6 @@ export default function PexipProvider({ children }) {
     pexRTC.onError = callError;
     // Link the callDisconnected method to the onDisconnect callback
     pexRTC.onDisconnect = callDisconnected;
-
-    pexRTC.onPresentation = callPresentation;
-    pexRTC.onPresentationReload = callPresentationReload;
-
-    pexRTC.onScreenshareConnected = screenshareConnected;
-    pexRTC.onScreenshareStopped = screenshareStopped;
 
     pexRTC.onRosterList = rosterListUpdate;
   }, []);

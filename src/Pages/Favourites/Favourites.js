@@ -6,7 +6,7 @@ import { usePexip } from '../../Providers/Pexip/PexipProvider';
 import './Favourites.scss';
 
 export default function Favourites() {
-  const { topToasts, addTopToast } = useToasts();
+  const { addTopToast } = useToasts();
   const navigate = useNavigate();
 
   const { makeCall } = usePexip();

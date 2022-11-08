@@ -70,7 +70,7 @@ export default function Landing() {
       <div className='landingFooter'>
         <div className='landingDeviceName'>healthcare-007</div>
         <div className='landingLogo'>
-          <img src={PexipLogo} />
+          <img src={PexipLogo} alt='pexHealth' />
         </div>
         <div className='landingRoomName'>Clinic XYZ Southern Region</div>
       </div>

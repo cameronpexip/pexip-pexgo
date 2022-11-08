@@ -10,9 +10,6 @@ import {
   faLightbulb,
   faMicrophone,
   faMicrophoneSlash,
-  faMagnifyingGlassPlus,
-  faMagnifyingGlassMinus,
-  faMountain,
 } from '@fortawesome/free-solid-svg-icons';
 
 import './InCall.scss';
@@ -51,7 +48,7 @@ export default function InCall() {
   }
 
   function toggleFlashlight(override = undefined) {
-    let light = override != undefined ? override : !flashlightState;
+    let light = override !== undefined ? override : !flashlightState;
 
     navigator.mediaDevices.getUserMedia({ video: true }).then((mediaStream) => {
       const track = mediaStream.getVideoTracks()[0];
@@ -87,13 +84,6 @@ export default function InCall() {
       .getUserMedia({ video: { zoom: true } })
       .then((mediaStream) => {
         const track = mediaStream.getVideoTracks()[0];
-
-        // const capabilities = track.getCapabilities();
-        // const settings = track.getSettings();
-
-        // console.log('capabilities', capabilities);
-        // console.log('capabilities.zoom', capabilities.zoom);
-        // console.log('settings', settings);
 
         track
           .applyConstraints({
