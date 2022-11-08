@@ -5,6 +5,7 @@ import { useToasts } from '../../Providers/Toasts/ToastsProvider';
 import { usePexip } from '../../Providers/Pexip/PexipProvider';
 
 import './QR.scss';
+import VideCover from '../../Assets/VideoCover.png';
 
 export default function QR() {
   const [qrWait, setQRWait] = useState(false);
@@ -64,7 +65,7 @@ export default function QR() {
       <div className='qrHeader'>Scan QR Code</div>
       <div className='qrContent'>
         <div className='qrScanner'>
-          <video ref={ref} autoPlay='autoplay' />
+          <video ref={ref} autoPlay='autoplay' poster={VideCover} />
         </div>
       </div>
       <div className='qrFooter'>
