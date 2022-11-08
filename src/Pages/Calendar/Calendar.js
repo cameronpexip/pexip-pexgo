@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useToasts } from '../../Providers/Toasts/ToastsProvider';
 import { useNavigate } from 'react-router-dom';
 
@@ -33,7 +33,7 @@ export default function Calendar() {
 
   const { makeCall } = usePexip();
 
-  const getDates = useContext(() => {
+  const getDates = useCallback(() => {
     let cal = [...calendars];
     let now = new Date();
 
@@ -42,7 +42,7 @@ export default function Calendar() {
     cal[2].date = `${now.getHours() + 2}:00 - ${now.getHours() + 2}:30`;
 
     setCalendars(cal);
-  });
+  }, []);
 
   function callCalendar(index) {
     addTopToast(`Calling ${calendars[index].subject}`, null, 3000);
