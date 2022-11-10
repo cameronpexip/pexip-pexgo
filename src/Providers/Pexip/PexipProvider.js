@@ -114,7 +114,7 @@ export default function PexipProvider({ children }) {
   }
 
   function makeCall(meeting, participantName) {
-    pexRTC.vp8_enabled = false;
+    pexRTC.vp8_enabled = true;
     pexRTC.vp9_enabled = false;
 
     pexRTC.muteAudio(state.muteMic);
