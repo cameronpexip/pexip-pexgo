@@ -49,7 +49,7 @@ export default function Landing() {
             <div className='optionCardHeader'>
               Scan QR
               <br />
-              QR をスキャン
+              QRコードを読み取る
             </div>
           </div>
 
@@ -90,7 +90,7 @@ export default function Landing() {
         <div className='landingDeviceName'>
           healthcare-07
           <br />
-          健康-07
+          ヘルスケア - 07
         </div>
         <div className='landingLogo'>
           <img src={PexipLogo} alt='pexHealth' />
@@ -98,7 +98,7 @@ export default function Landing() {
         <div className='landingRoomName'>
           My Medical Clinic
           <br />
-          私の診療所
+          かかりつけのクリニック
         </div>
       </div>
     </div>
