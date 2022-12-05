@@ -30,7 +30,11 @@ export default function Landing() {
             <div className='optionCardIcon'>
               <FontAwesomeIcon icon={faStar} />
             </div>
-            <div className='optionCardHeader'>お気に入り</div>
+            <div className='optionCardHeader'>
+              Favourites
+              <br />
+              お気に入り
+            </div>
           </div>
 
           <div
@@ -42,7 +46,11 @@ export default function Landing() {
             <div className='optionCardIcon'>
               <FontAwesomeIcon icon={faQrcode} />
             </div>
-            <div className='optionCardHeader'>QR をスキャン</div>
+            <div className='optionCardHeader'>
+              Scan QR
+              <br />
+              QR をスキャン
+            </div>
           </div>
 
           <div
@@ -54,7 +62,11 @@ export default function Landing() {
             <div className='optionCardIcon'>
               <FontAwesomeIcon icon={faCalendar} />
             </div>
-            <div className='optionCardHeader'>カレンダー</div>
+            <div className='optionCardHeader'>
+              Calendar
+              <br />
+              カレンダー
+            </div>
           </div>
 
           <div
@@ -66,7 +78,11 @@ export default function Landing() {
             <div className='optionCardIcon'>
               <FontAwesomeIcon icon={faTools} />
             </div>
-            <div className='optionCardHeader'>設定</div>
+            <div className='optionCardHeader'>
+              Settings
+              <br />
+              設定
+            </div>
           </div>
         </div>
       </div>
