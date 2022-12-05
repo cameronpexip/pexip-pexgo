@@ -8,14 +8,17 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import './Landing.scss';
-import PexipLogo from '../../Assets/pexHealth.png';
+import PexipHealthLogo from '../../Assets/pexHealth.png';
+import PexipLogo from '../../Assets/logo-white.png';
 
 export default function Landing() {
   const navigate = useNavigate();
 
   return (
     <div className='landingContainer'>
-      <div className='landingHeader'>Department of Health</div>
+      <div className='landingHeader'>
+        <img src={PexipHealthLogo} alt='pexHealth' />
+      </div>
       <div className='landingContent'>
         <div className='optionCards'>
           <div
@@ -27,7 +30,7 @@ export default function Landing() {
             <div className='optionCardIcon'>
               <FontAwesomeIcon icon={faStar} />
             </div>
-            <div className='optionCardHeader'>Favourites</div>
+            <div className='optionCardHeader'>お気に入り</div>
           </div>
 
           <div
@@ -39,7 +42,7 @@ export default function Landing() {
             <div className='optionCardIcon'>
               <FontAwesomeIcon icon={faQrcode} />
             </div>
-            <div className='optionCardHeader'>Scan QR</div>
+            <div className='optionCardHeader'>QR をスキャン</div>
           </div>
 
           <div
@@ -51,7 +54,7 @@ export default function Landing() {
             <div className='optionCardIcon'>
               <FontAwesomeIcon icon={faCalendar} />
             </div>
-            <div className='optionCardHeader'>Calendar</div>
+            <div className='optionCardHeader'>カレンダー</div>
           </div>
 
           <div
@@ -63,16 +66,24 @@ export default function Landing() {
             <div className='optionCardIcon'>
               <FontAwesomeIcon icon={faTools} />
             </div>
-            <div className='optionCardHeader'>Settings</div>
+            <div className='optionCardHeader'>設定</div>
           </div>
         </div>
       </div>
       <div className='landingFooter'>
-        <div className='landingDeviceName'>healthcare-007</div>
+        <div className='landingDeviceName'>
+          healthcare-07
+          <br />
+          健康-07
+        </div>
         <div className='landingLogo'>
           <img src={PexipLogo} alt='pexHealth' />
         </div>
-        <div className='landingRoomName'>Clinic XYZ Southern Region</div>
+        <div className='landingRoomName'>
+          My Medical Clinic
+          <br />
+          私の診療所
+        </div>
       </div>
     </div>
   );
